@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/pintuer.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
+    <script src="/public/js/jquery-3.2.1.js"></script>
+    <script src="/public/js/pintuer.js"></script>
+    <script src="/public/js/addshop.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>添加商品</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" action="">
+            <div class="form-group">
+                <div class="label">
+                    <label>商品名称：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="sname" data-validate="required:请输入商品名称" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品名称(English)：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="senglish"
+                           data-validate="required:请输入商品名称(English)" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>商品原价：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="sprice" data-validate="required:请输入商品原价" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品现价：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="snewprice" data-validate="required:请输入商品现价" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>茶色：</label>
+                </div>
+                <div class="field">
+                    <select name="scolor" class="input w50" id="selectcolor"></select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>茶品：</label>
+                </div>
+                <div class="field">
+                    <select name="stype" class="input w50" id="selecttype"></select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>茶产地：</label>
+                </div>
+                <div class="field">
+                    <select name="saddress" class="input w50" id="selectadress"></select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品描述：</label>
+                </div>
+                <div class="field">
+                    <textarea class="input" name="sdescription" style=" height:90px;"></textarea>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品内容：</label>
+                </div>
+                <div class="field">
+                    <textarea name="scontent" class="input" style="height:450px; border:1px solid #ddd;"></textarea>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品图片：</label>
+                </div>
+                <div class="field">
+                    <input type="file"id="simg" value="" multiple>
+                    <input type="hidden" name="stu" id="simage" value="" multiple>
+                    <div class="imgBox"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit" id="sub"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $.ajax({
+        url: "/index.php/login/session",
+        dataType:'text',
+        success: function(data){
+            if(data=='您未登录'){
+                alert('您未登录,请先登录')
+                location.href='/index.php/login/index';
+            }
+        }
+    });
+</script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/pintuer.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
+    <script src="/public/js/jquery-3.2.1.js"></script>
+    <script src="/public/js/pintuer.js"></script>
+    <script src="/public/js/addumessage.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>添加收件信息</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" action="">
+            <div class="form-group">
+                <div class="label">
+                    <label>所属用户：</label>
+                </div>
+                <div class="field">
+                    <select name="uname" class="input w50" id="select"></select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>收件人：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="mname" data-validate="required:请输入收件人" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>收件地址：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="maddress" data-validate="required:请输入收件地址" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>邮编：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="myb" data-validate="required:请输入邮编" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>收件人手机号：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="mphone" data-validate="required:请输入收件人手机号" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>收件人电话号：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="mdh" data-validate="required:请输入收件人电话号" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>是否默认：</label>
+                </div>
+                <div class="field" style="padding-top:8px;">
+                    是 <input id="yes" name="mtype" type="radio" value="是"/>
+                    否 <input id="no"  name="mtype"  type="radio" value="否"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit" id="sub"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $.ajax({
+        url: "/index.php/login/session",
+        dataType:'text',
+        success: function(data){
+            if(data=='您未登录'){
+                alert('您未登录,请先登录')
+                location.href='/index.php/login/index';
+            }
+        }
+    });
+</script>

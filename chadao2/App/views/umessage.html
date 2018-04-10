@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/pintuer.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
+    <script src="/public/js/jquery-3.2.1.js"></script>
+    <script src="/public/js/pintuer.js"></script>
+    <script src="/public/js/umessage.js"></script>
+</head>
+<body>
+<form method="post" action="" id="listform">
+    <div class="panel admin-panel">
+        <div class="panel-head"><strong class="icon-reorder"> 收件信息列表</strong></div>
+        <div class="padding border-bottom">
+            <ul class="search" style="padding-left:10px;">
+                <li><a class="button border-main icon-plus-square-o" href="/index.php/hthome/addumessage"> 添加收件信息
+                </a></li></li>
+            </ul>
+        </div>
+        <table class="table table-hover text-center">
+            <tr>
+                <th>ID</th>
+                <th>所属用户</th>
+                <th>收件地址</th>
+                <th>邮编</th>
+                <th>收件人姓名</th>
+                <th>手机号</th>
+                <th>电话号</th>
+                <th>是否默认</th>
+                <th>操作</th>
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+</form>
+<style>
+    input{
+        width: auto;
+        border:none;
+        text-align: center;
+    }
+</style>
+</body>
+</html>
+<script>
+    $.ajax({
+        url: "/index.php/login/session",
+        dataType:'text',
+        success: function(data){
+            if(data=='您未登录'){
+                alert('您未登录,请先登录')
+                location.href='/index.php/login/index';
+            }
+        }
+    });
+</script>

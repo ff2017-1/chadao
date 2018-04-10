@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/public/icon/chadao/iconfont.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/homeheader.css">
+    <script src="/public/js/jquery-3.2.1.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/qtlogin.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div>
+                <span id="denglu"><a>登录</a></span>
+                <span id="zhuce"><a>注册</a></span>
+            </div>
+            <div class="loginBox">
+                <div class="loginBox-img"><img src="" alt=""></div>
+                <div class="loginBox-text"><b>Hi~ <span class="loginBox-uname" id=""></span></b></div>
+                <a class="btnTc">退出登录</a>
+            </div>
+            <div class="pergwc">
+                 <a id="personal"> <i class="iconfont icon-wode"></i></a>
+                 <a id="gouwuche"><i class="iconfont icon-cart"></i></a>
+            </div>
+        </div>
+        <div class="bottom">
+            <div>
+                <img src="/public/img/7765logo.jpg" alt="" style="width:77px;height: 65px">
+                <nav>
+                    <ul class="daohang">
+                        <li><a href="/index.php/home/index" class="navactive">首页</a></li>
+                        <li><a href="/index.php/home/shoplist">产品</a></li>
+                        <li>
+                            <input type="text" placeholder="普洱茶" id="seas">
+
+                            <ul id="sea"></ul>
+                        </li>
+                        <a href=""><i class="iconfont icon-sousuo"></i></a>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <!--登录注册-->
+    <div class="yhdl">
+        <div id="denglu1" class="zz-box">
+            <div class="closes">×</div>
+            <div id="zhuce2" class="lhzc">立即注册→</div>
+            <div class="login-header"><img src="/public/img/wlogo_03.png" ></div>
+            <div class="login-welcome">
+                <h1>用/户/登/陆</h1>
+                <h3 style="color: #d9d4d5">Welcome to our website for shopping</h3>
+            </div>
+            <div id="logins">
+                <form action="" method="post" class="froms">
+                    <p><input type="text" name="user" id="users" placeholder="用户名"
+                              data-validate="require:'必填项';username:'1-10位的字母、数字、_或汉字'"></p>
+                    <p><input type="password" name="upass" id="pwds" placeholder="密码" style=""
+                              data-validate="require:'必填项';password:'1-10位的密码'"></p>
+                    <p  id="yzBox">
+                        <input  type="test" id="yz" placeholder="验证码" data-validate="require:'必填项';yz:'1-4位的字母或数字'">
+                        <img alt="" src="/App/code.php?id="+Math.random()>
+                    </p>
+                    <p><input type="submit" id="submits" value="登录 SIGN UP" style=""></p>
+                </form>
+            </div>
+        </div>
+        <!--注册-->
+        <div id="zhuce1" class="zz-box">
+            <div class="closes">×</div>
+            <div id="denglu2" class="lhzc">
+                立即登陆→
+            </div>
+            <div class="login-header">
+                <img src="/public/img/wlogo_03.png" ></div>
+            <div class="login-welcome">
+                <h1>用/户/注/册</h1>
+                <h3 style="color: #d9d4d5">Welcome to our website for shopping</h3>
+            </div>
+            <div id="login">
+                <form action="" method="post" class="form">
+                    <p><input type="text" name="uname" id="user" placeholder="用户名"
+                              data-validate="require:'必填项';username:'1-10位的字母、数字、_或汉字'"></p>
+                    <p><input type="password" name="upass" id="pwd" placeholder="密码"
+                              data-validate="require:'必填项';password:'1-10位的密码'"></p>
+                    <p><input type="password" name="upass" id="surepwd" placeholder="确认密码"
+                              data-validate="require:'必填项';password:'1-10位的密码'"></p>
+                    <p><input type="submit" id="submit" value="注册 SIGN IN" style=""></p>
+                </form>
+            </div>
+        </div>
+    </div>

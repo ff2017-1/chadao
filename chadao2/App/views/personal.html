@@ -1,0 +1,145 @@
+<link rel="stylesheet" href="/public/css/personal.css">
+<script src="/public/js/personal.js"></script>
+<style>
+    table input{
+        border:none;
+        text-align: center;
+    }
+</style>
+<div class="personal">
+    <div class="personal-img">
+        <img src="/public/img/people.png" alt="">
+    </div>
+</div>
+<div class="content">
+    <div class="content-left">
+        <img src="/public/img/people1.png" alt="">
+        <ul class="content-left-list">
+            <div>
+                <span>交易管理</span>
+                <span>SHLILAN</span>
+            </div>
+            <li>
+                <div>·</div>
+                <div class="mddd active">我<SPAN>|</SPAN>的<SPAN>|</SPAN>订<SPAN>|</SPAN>单</div>
+                <div class="jiantou active">›</div>
+            </li>
+            <li>
+                <div>·</div>
+                <div class="mddd">我<SPAN>|</SPAN>的<SPAN>|</SPAN>评<SPAN>|</SPAN>价</div>
+                <div class="jiantou">›</div>
+            </li>
+            <li>
+                <div>·</div>
+                <div class="mddd">地<SPAN>|</SPAN>址<SPAN>|</SPAN>管<SPAN>|</SPAN>理</div>
+                <div class="jiantou">›</div>
+            </li>
+        </ul>
+    </div>
+    <ul class="right-box">
+        <!--订单-->
+        <li class="content-right active">
+            <div class="content-right1">
+                <div>全部<br>订单</div>
+                <div></div>
+                <div>ALL<br>OREDER</div>
+            </div>
+            <ul class="content-right2">
+                <li>全部订单</li>
+                <li>单价(元)</li>
+                <li>商品数量</li>
+                <li>小计(元)</li>
+                <li>订单状态</li>
+                <li>操作</li>
+            </ul>
+            <div class="contentList">
+                <ul class="content-right3 active"></ul>
+            </div>
+            <div class="huanye">
+                <div class="divbtn1">‹</div>
+                <ul class="huanye-list">
+                    <li class="active"><div class="active">1</div></li>
+                </ul>
+                <div class="divbtn2">›</div>
+            </div>
+        </li>
+        <!--我的评价-->
+        <li class="content-right">
+            <div class="content-right1">
+                <div>我的<br>评价</div>
+                <div></div>
+                <div>MY<br>OPIONS</div>
+            </div>
+            <ul class="content-right2">
+                <li>我的评价</li>
+            </ul>
+                <ul class="opionshwader">
+                    <li>宝贝信息</li>
+                    <li>评价</li>
+                    <li>操作</li>
+                </ul>
+                <ul class="opionstbody">
+
+                </ul>
+        </li>
+        <!--收货地址-->
+        <li class="content-right">
+            <ul class="content-right2" style="margin-top:0">
+                <li>收货地址</li>
+            </ul>
+            <div class="content-right1"  style="margin: 15px 0">
+                <div>新增<br>地址</div>
+                <div></div>
+                <div>NEW<br>ADDRESS</div>
+            </div>
+            <ul class="addAddress">
+                <li>
+                    <span>添加新地址：</span>
+                    <span>所有选项均为必填项</span>
+                </li>
+                <li>
+                    <span>收件地址：</span>
+                    <input type="text" class="maddress" value="" name="maddress" data-validate="required:请输入收件地址" />
+                </li>
+                <li>
+                    <span>邮编：</span>
+                    <input type="text" class="myb" value="" name="myb" data-validate="required:请输入收件地址" />
+                </li>
+                <li>
+                    <span>收件人：</span>
+                    <input type="text" class="mname" value="" name="mname" data-validate="required:请输入收件人" />
+                </li>
+                <li>
+                    <span>手机号：</span>
+                    <input type="text" class="mphone" value="" name="mphone" data-validate="required:请输入收件人手机号" />
+                </li>
+            </ul>
+            <button type="submit" id="sub">保存地址</button>
+            <div class="content-right1" style="margin: 30px 0 10px">
+                <div>查看<br>地址</div>
+                <div></div>
+                <div>SHOW<br>ADDRESS</div>
+            </div>
+            <table class="table text-center">
+                <tr style="background: #cccccc;text-align: center">
+                    <th style="text-align: center;border:none">收件人</th>
+                    <th style="text-align: center;border:none">手机号</th>
+                    <th style="text-align: center;border:none">收件地址</th>
+                    <th style="text-align: center;border:none">是否默认</th>
+                    <th style="text-align: center;border:none">操作</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </li>
+    </ul>
+</div>
+<!--新品推荐-->
+<div class="personal" style="height:auto;padding: 50px 0 25px">
+    <div class="personal-img" style="width: 285px;">
+        <img src="/public/img/newshop.png" alt=""  class="personal-img">
+    </div>
+</div>
+<ul class="newshopping"></ul>
+
+
+

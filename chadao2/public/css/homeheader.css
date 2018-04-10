@@ -1,0 +1,378 @@
+@import url(base.css);
+/*搜索*/
+/*搜索*/
+.daohang>li:last-of-type{
+    position: relative;
+}
+#sea{
+    position: absolute;
+    top:101%;
+    left: 13px;
+    z-index: 5000;
+    width: 218px;
+    max-height: 1000px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.2);
+    padding: 10px;
+    display: none;
+}
+#sea>li>a{
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #027237;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.seaimg{
+    width:55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.seaimg>img{
+    width:55px;
+    height: 55px;
+    border-radius: 50%;
+}
+.seatext{
+    width: 120px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.seatext>span{
+    font-size: 14px;
+    color: #333333;
+}
+.seatext>span:first-of-type{
+    font-size: 16px;
+    color: red;
+}
+.seatext>span:last-of-type{
+    font-size: 12px;
+    color: #027237;
+}
+/*头部*/
+header{
+    width:100%;
+    height:130px;
+    background: #fff;
+}
+/*头部上*/
+header>.top{
+    width:850px;
+    height: 50%;
+    margin:0 auto;
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.loginBox{
+    width: 250px;
+    height: 100%;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    z-index: -5;
+}
+.loginBox.active{
+    opacity: 1;
+    z-index: 100;
+}
+.loginBox-img{
+    width: 35px;
+    height: 35px;
+    margin:0 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 1px #027237;
+}
+.loginBox-img>img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.loginBox-text{
+    width: auto;
+    height: 35px;
+    font-size: 16px;
+    color: #333333;
+    line-height: 35px;
+}
+.loginBox-uname{
+    color: #027237;
+}
+.btnTc{
+    display: block;
+    width: auto;
+    height: 25px;
+    background: #027237;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding: 0 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+header>.top>div>span{
+    display: inline-block;
+    font-size: 18px;
+    width:100px;
+    height:32px;
+    margin-top: 16px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 1.7;
+    margin-right: 15px;
+    box-shadow: 0 5px 10px 0px #027237;
+    cursor: pointer;
+}
+header>.top>div>span>a{
+    display: block;
+    width:100%;
+    height:100%;
+    color: #fff;
+}
+header>.top>div>span:nth-of-type(1){
+    background: #027237;
+    border:2px solid #fff;
+}
+header>.top>div>span:nth-of-type(2){
+    background: #fff;
+    border:2px solid #027237;
+}
+header>.top>div>span:nth-of-type(2)>a{
+    color: #027237;
+}
+header>.top>.pergwc>a{
+    display: block;
+    float:right;
+    margin-left: 25px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+header>.top>.pergwc>a>i{
+    font-size: 25px;
+    color: #7F7F7F;
+}
+/*头部下*/
+header>.bottom{
+    height: 50%;
+    background: #027237;
+}
+header>.bottom>div{
+    width:850px;
+    height: 100%;
+    margin:0 auto;
+    background: #027237;
+}
+nav{
+    float: right;
+    height:100%;
+}
+nav>ul{
+    margin:18px 0 0  0;
+    position: relative;
+}
+header>.bottom nav>ul>a{
+    position: absolute;
+    right:30px;
+    top: 1px;
+}
+header>.bottom nav>ul>a>i{
+    font-size: 22px;
+    margin-right: 5px;
+    color: #027237;
+}
+nav>ul>li{
+    float: left;
+    font-size: 18px;
+    margin-right: 25px;
+}
+nav>ul>li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+nav>ul>li>input{
+    width:245px;
+    height:32px;
+    border-radius: 100px;
+    font-size: 16px;
+    border:none;
+    outline:none;
+    padding-left: 20px;
+    line-height: 32px;
+}
+/*字体加粗*/
+.navactive{
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/*遮罩*/
+.yhdl{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.form-help{
+    padding: 0px 10px;
+    color: red;
+    text-align: left;
+}
+.zz-box {
+    width: 500px;
+    height: auto;
+    padding: 50px;
+    border:4px solid #000;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    margin: 40px auto;
+    position: relative;
+    display: none;
+}
+.zz-box>.closes{
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    font-size: 30px;
+    color: #333333;
+    text-align: center;
+    line-height: 30px;
+    cursor:pointer
+}
+.lhzc{
+    width: 130px;
+    height: 40px;
+    background: #027237;
+    border-radius: 20px;
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    cursor:pointer
+}
+.login-active{
+    display: block;
+}
+/*注册登录*/
+/*头部*/
+.login-header{
+    height : 80px;
+    width : 148px;
+    margin: 0 auto;
+}
+.login-welcome{
+    margin: 10px auto;
+    margin: 10px auto;
+    text-align: center;
+}
+/*主体*/
+#login,#logins{
+    width: 400px;
+    height: 250px;
+    background: #FFF;
+    margin:0 auto;
+    position: relative;
+}
+
+#login form p,#logins form p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+#user,#users{
+    background:url('/public/img/user.png') rgba(255,255,255,.1) no-repeat;
+    background-size: 25px 25px;
+    width: 400px;
+    height: 30px;
+    border:solid #ccc 1px;
+    border-radius: 10px;
+    padding-left: 32px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    outline: none
+}
+#pwd,#pwds{
+    background: url('/public/img/pwd.png') rgba(255,255,255,.1) no-repeat;
+    background-size: 25px 25px;
+    width: 400px;
+    height: 30px;
+    border:solid #ccc 1px;
+    border-radius: 10px;
+    padding-left: 32px;
+    margin-bottom: 15px;
+    outline: none
+}
+#surepwd{
+    background: url('/public/img/pwd.png') rgba(255,255,255,.1) no-repeat;
+    background-size: 25px 25px;
+    width: 400px;
+    height: 30px;
+    border:solid #ccc 1px;
+    border-radius: 10px;
+    padding-left: 32px;
+    margin-bottom: 15px;
+    outline: none
+}
+#submit,#submits{
+    width: 400px;
+    height: 40px;
+    border:solid #ccc 1px;
+    border-radius: 25px;
+    outline: none;
+    color:#fff;
+    font-size: 20px;
+    line-height: 40px;
+    background: #027237;
+}
+#submit:hover,#submits:hover{
+    cursor: pointer;
+}
+#yz{
+    background: url('/public/img/pwd.png') rgba(255,255,255,.1) no-repeat;
+    background-size: 25px 25px;
+    width: 400px;
+    height: 30px;
+    border:solid #ccc 1px;
+    border-radius: 10px;
+    padding-left: 32px;
+    margin-bottom: 15px;
+    outline: none
+}
+#yzBox{
+    position: relative;
+    overflow: hidden;
+}
+#yzBox img{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100px;
+    height: 30px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}

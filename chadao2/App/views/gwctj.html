@@ -1,0 +1,151 @@
+
+    <link rel="stylesheet" href="/public/css/gwctj.css">
+    <script src="/public/js/gwctj.js"></script>
+<main>
+    <div class="head">
+        <div class="title">
+            <img src="/public/img/ddhead.png" alt="">
+        </div>
+
+
+        <ul>
+            <li>
+                <div>
+                    <div>壹</div>
+                </div>
+                <span>购物车</span>
+            </li>
+            <div class="xian"></div>
+            <li>
+                <div>
+                    <div>贰</div>
+                </div>
+                <span>订单</span>
+            </li>
+            <div class="xian"></div>
+            <li>
+                <div>
+                    <div>叁</div>
+                </div>
+                <span>付款</span>
+            </li>
+            <div class="xian"></div>
+            <li>
+                <div>
+                    <div>肆</div>
+                </div>
+                <span>完成</span>
+            </li>
+        </ul>
+    </div>
+    <div class="shouhuo">
+        <div class="shouhuotiao">收货地址</div>
+        <div class="shouhuotable">
+            <table class="table text-center">
+                <tr style="background: #cccccc;text-align: center">
+                    <th style="text-align: center;border:none">收件人</th>
+                    <th style="text-align: center;border:none">手机号</th>
+                    <th style="text-align: center;border:none">收件地址</th>
+                    <th style="text-align: center;border:none">是否默认</th>
+                    <th style="text-align: center;border:none">操作</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <button class="buynow">添加新地址</button>
+    </div>
+    <div class="zhifu">
+        <div class="shouhuotiao">支付方式</div>
+        <ul class="zhifu-xq">
+            <li class="active">
+                <span><b>在线支付(推荐)</b></span>
+                <span>支持主流银行卡、微信、支付宝、银联等付款方式，方便快捷</span>
+            </li>
+            <li>
+                <span><b>货到付款</b></span>
+                <span>部分站点不支持刷卡支付，具体请咨询当地快递公司</span>
+            </li>
+        </ul>
+    </div>
+    <div class="zhifu">
+        <div class="shouhuotiao">配送方式</div>
+        <ul class="zhifu-xq">
+            <li class="active">
+                <span><b>普通快递:运费0元</b></span>
+            </li>
+            <li>
+                <span><b>顺丰快递:运费10元</b></span>
+            </li>
+        </ul>
+    </div>
+    <div class="zhifu">
+        <div class="shouhuotiao">配送时间</div>
+        <ul class="zhifu-xq">
+            <li class="active">
+                <span><b>不限时间</b></span>
+            </li>
+            <li>
+                <span><b>工作日(周一到周五)</b></span>
+            </li>
+            <li>
+                <span><b>非工作日(周六到周日)</b></span>
+            </li>
+            <span>温馨提示：快递公司会尽力按您选择的配送时间配送，如遇到特殊情况(天气、环境等)时无法按您要求的时间配送请您谅解</span>
+        </ul>
+    </div>
+    <div class="zhifu">
+        <div class="shouhuotiao">订单详情</div>
+    </div>
+    <div class="wrapper">
+        <ul class="scrollheader">
+            <li>商品信息</li>
+            <li>商品单价</li>
+            <li>商品数量</li>
+            <li>小计</li>
+        </ul>
+        <ul class="scroll"></ul>
+        <div class="zongjia">
+            <div>
+                <span>应付总金额</span>
+                <div class="jia">
+                    <span><b class="totalNum">0.00</b></span>
+                    <span>人/民/币</span>
+                </div>
+                <a id="addDD">提交订单</a></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--新添地址-->
+    <div class="zhezhao">
+        <div>
+            <div class="top">
+                <div>添加新地址</div>
+                <div class="closes">×</div>
+            </div>
+            <ul class="addAddress">
+                <li>
+                    <span>添加新地址：</span>
+                    <span>所有选项均为必填项</span>
+                </li>
+                <li>
+                    <span>收件地址：</span>
+                    <input type="text" class="maddress" value="" name="maddress" data-validate="required:请输入收件地址" />
+                </li>
+                <li>
+                    <span>邮编：</span>
+                    <input type="text" class="myb" value="" name="myb" data-validate="required:请输入收件地址" />
+                </li>
+                <li>
+                    <span>收件人：</span>
+                    <input type="text" class="mname" value="" name="mname" data-validate="required:请输入收件人" />
+                </li>
+                <li>
+                    <span>手机号：</span>
+                    <input type="text" class="mphone" value="" name="mphone" data-validate="required:请输入收件人手机号" />
+                </li>
+            </ul>
+            <button type="submit" id="sub">保存地址</button>
+        </div>
+    </div>

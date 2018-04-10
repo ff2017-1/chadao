@@ -1,0 +1,94 @@
+/*新品推荐*/
+@import url(base.css);
+.personal{
+    width: 850px;
+    height: 170px;
+    padding: 55px 0px;
+    margin: 0 auto;
+}
+.personal-img{
+    width: 145px;
+    height: 60px;
+    margin: auto 0;
+}
+.personal-img>img{
+    width: 100%;
+    height: 100%;
+    margin: auto 0;
+}
+/*主体*/
+.ddsuccess{
+    width: 320px;
+    height: 360px;
+    margin:0 auto;
+}
+.successImg{
+    width: 100%;
+    height: 253px;
+    background: url("/public/img/ddsuccess.png") no-repeat center/cover;
+}
+.successText{
+    width: 100%;
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    line-height: 25px;
+}
+.successText>div{
+    font-size: 14px;
+    color: #666666;
+}
+.successBtns{
+    width: 160px;
+    height: 30px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+.successBtns>a{
+    display: block;
+    width: 75px;
+    height: 30px;
+    border: 2px solid #027237;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: #333333;
+}
+/*新品推荐*/
+.newshopping{
+    width: 850px;
+    height: 173px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+.newshopping>li{
+    width: 205px;
+    height: 173px;
+}
+.newshopping>li>a>.newshopping-img{
+    width: 100%;
+    height: 127px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.newshopping-text{
+    width: 100%;
+    height: 49px;
+    padding:6px 0 ;
+}
+.newshopping-text>span{
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #333333;
+}
+.newshopping-text>span:last-of-type{
+    font-size: 14px;
+    color: #cccccc;
+}

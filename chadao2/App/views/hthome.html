@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>后台管理中心</title>
+    <link rel="stylesheet" href="/public/css/pintuer.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
+    <script src="/public/js/jquery-3.2.1.js"></script>
+    <script src="/public/js/hthome.js"></script>
+</head>
+<style>
+    #tcdl{
+        cursor: pointer;
+    }
+</style>
+<body style="background-color:#f2f9fd;">
+<div class="header bg-main">
+    <div class="logo margin-big-left fadein-top">
+        <h1>
+            <!--<img src="/public/img/y.jpg" class="radius-circle rotate-hover" height="50" alt="" />-->
+            茶道后台管理中心
+        </h1>
+    </div>
+    <div class="head-l">
+        <a class="button button-little bg-green" href="/index.php/home/index" target="_blank"><span
+                class="icon-home"></span> 前台首页</a>&nbsp;&nbsp;
+        <a class="button button-little bg-red" id="tcdl" href="/index.php/login/index"><span
+                class="icon-power-off"></span> 退出登录</a> </div>
+</div>
+<div class="leftnav">
+    <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
+    <h2><span class="icon-user"></span>人员管理</h2>
+    <ul style="display:block">
+        <li><a href="/index.php/hthome/admins" target="right"><span class="icon-caret-right"></span>管理员管理</a></li>
+        <li><a href="/index.php/hthome/users" target="right"><span class="icon-caret-right"></span>用户管理</a></li>
+    </ul>
+    <h2><span class="icon-pencil-square-o"></span>页面管理</h2>
+    <ul>
+        <li><a href="/index.php/hthome/banner" target="right"><span class="icon-caret-right"></span>轮播管理
+        </a></li>
+        <li><a href="/index.php/hthome/service" target="right"><span class="icon-caret-right"></span>贴心服务
+        </a></li>
+    </ul>
+    <h2><span class="icon-pencil-square-o"></span>商品管理</h2>
+    <ul>
+        <li><a href="/index.php/hthome/shop" target="right"><span class="icon-caret-right"></span>商品管理</a></li>
+        <li><a href="/index.php/hthome/color" target="right"><span class="icon-caret-right"></span>茶色管理</a></li>
+        <li><a href="/index.php/hthome/type" target="right"><span class="icon-caret-right"></span>茶品管理</a></li>
+        <li><a href="/index.php/hthome/adress" target="right"><span class="icon-caret-right"></span>茶产地管理</a></li>
+        <li><a href="/index.php/hthome/tj" target="right"><span class="icon-caret-right"></span>推荐位管理</a></li>
+    </ul>
+    <h2><span class="icon-pencil-square-o"></span>购物管理</h2>
+    <ul>
+        <li><a href="/index.php/hthome/shopping" target="right"><span class="icon-caret-right"></span>购物车管理</a></li>
+        <li><a href="/index.php/hthome/opions" target="right"><span class="icon-caret-right"></span>评价管理</a></li>
+        <li><a href="/index.php/hthome/umessage" target="right"><span class="icon-caret-right"></span>收件管理</a></li>
+    </ul>
+
+</div>
+<div class="admin">
+    <iframe scrolling="auto" rameborder="0" src="/index.php/hthome/users" name="right" width="100%" height="100%"></iframe>
+</div>
+<ul class="bread">
+    <li><a href="{:U('Index/info')}" target="right" class="icon-home"> 首页</a></li>
+</ul>
+</body>
+</html>
+<script>
+    $.ajax({
+        url: "/index.php/login/session",
+        dataType:'text',
+        success: function(data){
+            if(data=='您未登录'){
+                alert('您未登录,请先登录')
+                location.href='/index.php/login/index';
+            }
+        }
+    });
+    $('#tcdl').on('click',function () {
+        $.ajax({
+            url: "/index.php/login/updatesession",
+            dataType:'text',
+            success: function(data){
+                if(data=='ok'){
+                    location.href='/index.php/login/index';
+                }
+            }
+        });
+    })
+</script>

@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/public/css/myopions.css">
+<script src="/public/js/myopions.js"></script>
+<div class="opions">
+    <div class="top">我的评价</div>
+    <div class="centent">
+        <div class="centent-left">
+            <div class="centent-left-top">宝贝信息</div>
+            <div class="centent-left-bottom">
+                <a href="">
+                    <div class="shopImg"><img src="" alt=""></div>
+                    <div class="shopText">
+                        <p class="shopname"></p>
+                        <div class="shopprices"><span class="shopprice"></span>人/民/币</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="centent-right">
+            <textarea name="oname" placeholder="请输入对该宝贝的评价" maxlength="200"></textarea>
+            <div>还可以输入<span class="opionsnum">200</span>个字</div>
+            <input type="file"id="simg" value="" multiple style="margin-bottom: 15px">
+        </div>
+    </div>
+    <button class="bottom">发表评论</button>
+</div>
+<script>
+    // 获取
+    let sid= location.search.slice(location.search.indexOf('=')+1);
+    $.ajax({
+        url: '/index.php/home/queryshop',
+        data:{sid},
+        method: 'post',
+        dataType: 'json',
+        success: function success(data) {
+            $('.centent-left-bottom>a').attr('href','/index.php/home/xiangqing?sid='+data['sid'])
+            $('.shopImg>img').attr('src',data['stu'])
+            $('.shopname').html(data['sname'])
+            $('.shopprice').html(data['snewprice']+'.00')
+        }
+    });
+</script>

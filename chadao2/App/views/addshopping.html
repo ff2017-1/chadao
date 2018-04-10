@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/pintuer.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
+    <script src="/public/js/jquery-3.2.1.js"></script>
+    <script src="/public/js/pintuer.js"></script>
+    <script src="/public/js/addshopping.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加购物车商品</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" action="">
+            <div class="form-group">
+                <div class="label">
+                    <label>所属用户：</label>
+                </div>
+                <div class="field">
+                    <select name="uname" class="input w50" id="select"></select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品ID：</label>
+                </div>
+                <div class="field">
+                    <select name="sid" class="input w50" id="selectsid"></select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品数量：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="pcount" data-validate="required:请输入商品总价" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品总价：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="ptotal" data-validate="required:请输入商品总价" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>商品状态：</label>
+                </div>
+                <div class="field" style="padding-top:8px;">
+                    购物车 <input name="ptype" type="radio" value="购物车"/>
+                    待付款 <input name="ptype" type="radio" value="待付款"/>
+                    待发货 <input name="ptype"  type="radio" value="待发货"/>
+                    待收货 <input name="ptype" type="radio" value="待收货"/>
+                    待评价 <input name="ptype"  type="radio" value="待评价"/>
+                    交易成功 <input name="ptype"  type="radio" value="交易成功"/>
+                    交易失败 <input name="ptype"  type="radio" value="交易失败"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit" id="sub"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $.ajax({
+        url: "/index.php/login/session",
+        dataType:'text',
+        success: function(data){
+            if(data=='您未登录'){
+                alert('您未登录,请先登录')
+                location.href='/index.php/login/index';
+            }
+        }
+    });
+</script>

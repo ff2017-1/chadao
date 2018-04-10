@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/public/css/xiangqing.css">
+<script src="/public/js/xiangqing.js"></script>
+<div class="tztiao">
+    <div class="tiaozhuan">
+        <a href="/index.php/home/index"><h4>首页</h4></a>
+        <img src="/public/img/jiantou.png" alt="">
+        <a href="/index.php/home/shoplist"><h4>产品列表</h4></a>
+        <img src="/public/img/jiantou.png" alt="">
+        <a href="/index.php/home/xiangqing"><h4 class="snames"></h4></a>
+    </div>
+</div>
+
+<div class="hengxian"></div>
+<div class="xiang">
+    <!--left字体调整-->
+    <div class="left">
+        <p class="sname"></p>
+        <p class="senglish"></p>
+        <p class="sdescription"></p>
+        <p class="snewprice"></p>
+        <span class="sprice"></span><span>人/民/币</span>
+        <div class="heji">
+            <div class="reduce">-</div>
+            <div class="num">0</div>
+            <div class="add">+</div>
+        </div>
+        <div class="gouwu">
+            <div class="buy"><a>立即购买</a></div>
+            <div class="addcar"><a>加入购物车</a></div>
+        </div>
+    </div>
+    <div class="right">
+        <div> <img src="/public/img/430350tieguanyin.jpg" alt="" class="stu"></div>
+    </div>
+</div>
+<!--新品推荐-->
+<div class="zhouxin">
+<div class="personal" style="height:auto;padding: 50px 0 25px">
+    <div class="personal-img" style="width: 285px;">
+        <img src="/public/img/newshop3_03.png" alt=""  class="personal-img">
+    </div>
+</div>
+<ul class="newshopping"></ul>
+</div>
+<!--详情评价-->
+<div class="button">
+    <div class="bzxq"><img src="/public/img/xiangping_03.png" alt=""></div>
+    <div class="bzpj"><img src="/public/img/xiangping_05.png" alt=""></div>
+</div>
+<div class="kuang">
+    <ul class="pingjia active"></ul>
+    <div class="">
+        <img src="/public/img/tgy_03.png" alt="">
+    </div>
+</div>
+<script>
+    $('.button>.bzxq').on('click',function () {
+        $('.active').removeClass('active');
+        $('.kuang>ul').addClass('active');
+    })
+    $('.button>.bzpj').on('click',function () {
+        $('.active').removeClass('active');
+        $('.kuang>div').addClass('active');
+    })
+</script>
